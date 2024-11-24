@@ -8,14 +8,7 @@ let project = Project(
             destinations: .iOS,
             product: .app,
             bundleId: "io.tuist.Cards",
-            infoPlist: .extendingDefault(
-                with: [
-                    "UILaunchScreen": [
-                        "UIColorName": "",
-                        "UIImageName": "",
-                    ],
-                ]
-            ),
+            infoPlist: getInfoPlist(),
             sources: ["Cards/Sources/**"],
             resources: ["Cards/Resources/**"],
             dependencies: []
@@ -32,3 +25,19 @@ let project = Project(
         ),
     ]
 )
+
+fileprivate func getInfoPlist() -> InfoPlist {
+    return .extendingDefault(
+        with: [
+            "UILaunchScreen": [
+                "UIColorName": "",
+                "UIImageName": "",
+            ],
+            "UISupportedInterfaceOrientations": [
+                "UIInterfaceOrientationLandscapeRight",
+                "UIInterfaceOrientationLandscapeLeft"
+            ]
+            
+        ]
+    )
+}
