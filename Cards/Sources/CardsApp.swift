@@ -6,7 +6,10 @@ struct CardsApp: App {
         WindowGroup {
             MenuView<MenuViewModelImp>(
                 viewModel: MenuViewModelImp(
-                    model: MenuModel()
+                    model: MenuModel(
+                        playButtonTitle: "Play",
+                        configButtonTitle: "Language"
+                    )
                 )
             )
         }

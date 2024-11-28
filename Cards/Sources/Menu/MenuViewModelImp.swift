@@ -19,8 +19,8 @@ final class MenuViewModelImp {
 extension MenuViewModelImp: MenuViewModel {
     var modelPublisher: Published<MenuModel>.Publisher { $model }
     
-    func play() { }
+    func playAction() { }
     
-    func config() { }
+    func configAction() { }
 }
 

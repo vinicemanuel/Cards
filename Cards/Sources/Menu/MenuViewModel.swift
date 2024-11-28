@@ -11,10 +11,11 @@ import Combine
 protocol MenuViewModel: ObservableObject {
     var model: MenuModel { get }
     var modelPublisher: Published<MenuModel>.Publisher { get }
-    func play()
-    func config()
+    func playAction()
+    func configAction()
 }
 
 struct MenuModel {
-    
+    let playButtonTitle: String
+    let configButtonTitle: String
 }
